@@ -1,0 +1,289 @@
+{
+    "ProposedAssetOption": {
+        "ProposedEnergyProducerOption": {
+            "proposedESS1": {
+                "ProposedBatteryUnitOption.dischargeEfficiency": 92.0,
+                "Ravens.CimObjectType": "ProposedBatteryUnitOption",
+                "IdentifiedObject.mRID": "339b031a-2ea9-4816-b5e1-d867a9077b72",
+                "ProposedAssetOption.variablePrice": {
+                    "unit": "USD",
+                    "value": 800
+                },
+                "ProposedBatteryUnitOption.variableEnergyPrice": {
+                    "unit": "USD",
+                    "value": 400
+                },                
+                "ProposedAssetOption.ProposedLocations": [
+                    "proposedSite1"
+                ],
+                "ProposedAssetOption.lifetime": "P25Y",
+                "ProposedBatteryUnitOption.chargeEfficiency": 92.0,
+                "IdentifiedObject.name": "proposedESS1",
+                "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
+                "ProposedBatteryUnitOption.energyCapacityMin": 0.0,
+                "ProposedBatteryUnitOption.stateOfChargeMin": 20.0,
+                "ProposedBatteryUnitOption.energyCapacityMax": 50000.0,
+                "ProposedEnergyProducerOption.powerCapacityMax": 5000.0
+            },
+            "proposedPV1": {
+                "ProposedEnergyProducerOption.powerCapacityMin": 250.0,
+                "ProposedEnergyProducerOption.variablePrice": {
+                    "unit": "USD",
+                    "value": 1000.0
+                },
+                "ProposedAssetOption.ProposedLocations": [
+                    "proposedSite1"
+                ],
+                "ProposedEnergyProducerOption.operationsAndMaintenanceRateFixed": {
+                    "unit": "USD",
+                    "value": 100.0
+                },
+                "Ravens.CimObjectType": "ProposedPhotovoltaicUnitOption",
+                "ProposedAssetOption.lifetime": "P25Y",
+                "IdentifiedObject.name": "proposedPV1",
+                "IdentifiedObject.mRID": "d6910f52-7455-4074-9d94-e0851cf131db",
+                "ProposedEnergyProducerOption.powerCapacityMax": 10000.0
+            }
+        }
+    },
+    "Group": {
+        "LoadGroup": {
+            "ResidentialGroup": {
+                "ConformLoadGroup.EnergyConsumers": [
+                    "l1",
+                    "l2"
+                ],
+                "ConformLoadGroup.ConformLoadSchedules": [
+                    {
+                        "RegularIntervalSchedule.TimePoints": [],
+                        "BasicIntervalSchedule.value2Multiplier": "k",
+                        "RavensModel.CimObjectType": "ConformLoadSchedule",
+                        "BasicIntervalSchedule.value1Multiplier": "k",
+                        "RegularIntervalSchedule.timeStep": 3600,
+                        "BasicIntervalSchedule.value2Unit": "VAr",
+                        "BasicIntervalSchedule.value1Unit": "W",
+                        "IdentifiedObject.mRID": "4771e5b2-8924-4a76-ac17-47f860e41149"
+                    }
+                ],
+                "RavensModel.CimObjectType": "ConformLoadGroup",
+                "IdentifiedObject.name": "ResidentialGroup",
+                "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb"
+            },
+            "IndustrialGroup": {
+                "ConformLoadGroup.EnergyConsumers": [
+                    "l3"
+                ],
+                "ConformLoadGroup.ConformLoadSchedules": [
+                    {
+                        "RegularIntervalSchedule.TimePoints": [],
+                        "BasicIntervalSchedule.value2Multiplier": "k",
+                        "RavensModel.CimObjectType": "ConformLoadSchedule",
+                        "BasicIntervalSchedule.value1Multiplier": "k",
+                        "RegularIntervalSchedule.timeStep": 3600,
+                        "BasicIntervalSchedule.value2Unit": "VAr",
+                        "BasicIntervalSchedule.value1Unit": "W",
+                        "IdentifiedObject.mRID": "4406d3ce-8b10-4c88-8c69-342d2fc5ab7e"
+                    }
+                ],
+                "RavensModel.CimObjectType": "ConformLoadGroup",
+                "IdentifiedObject.name": "IndustrialGroup",
+                "IdentifiedObject.mRID": "384c563e-db80-426e-a128-6f26747ff966"
+            }
+        },
+        "GeographicalRegion": {
+            "Region1": {
+                "Ravens.CimObjectType": "GeographicalRegion",
+                "IdentifiedObject.name": "Region1",
+                "IdentifiedObject.mRID": "_CA096364-2430-45A7-A8BF-404D08C4ECCC",
+                "GeographicalRegion.Regions": [
+                    {
+                        "Regions.EnergyPrices": {
+                            "Ravens.CimObjectType": "EnergyPrices",
+                            "EnergyPrices.CapacityPrices": "CapacityPrices::'capacityprices1'",
+                            "IdentifiedObject.name": "energyprices1",
+                            "IdentifiedObject.mRID": "_8606CBB1-16EB-41A1-81F0-285709509192",
+                            "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps1'"
+                        },
+                        "Regions.EconomicProperty": {
+                            "EconomicProperty.inflationRate": 2.2,
+                            "EconomicProperty.taxRate": 26.0,
+                            "Ravens.CimObjectType": "EconomicProperty",
+                            "EconomicProperty.Regions": [
+                                "County"
+                            ],
+                            "IdentifiedObject.name": "CountyEconomicProperties",
+                            "IdentifiedObject.mRID": "c304f0e1-8480-4da5-b2d4-90359ebf7032",
+                            "EconomicProperty.discountRate": 5.8
+                        },
+                        "SubGeographicalRegion.Region": "#_CA096364-2430-45A7-A8BF-404D08C4ECCC",
+                        "Ravens.CimObjectType": "SubGeographicalRegion",
+                        "IdentifiedObject.name": "Region1_SubRegion",
+                        "IdentifiedObject.mRID": "_DAD61F6F-70FB-4D41-BE83-61ECF299B418"
+                    }
+                ]
+            },
+            "Region2": {
+                "Ravens.CimObjectType": "GeographicalRegion",
+                "IdentifiedObject.name": "Region2",
+                "IdentifiedObject.mRID": "_a513faee-2e68-4416-9d53-756f6d79e9f4",
+                "GeographicalRegion.Regions": [
+                    {
+                        "Regions.EnergyPrices": {
+                            "Ravens.CimObjectType": "EnergyPrices",
+                            "EnergyPrices.CapacityPrices": "CapacityPrices::'capacityprices2'",
+                            "IdentifiedObject.name": "energyprices2",
+                            "IdentifiedObject.mRID": "_f9921f2f-65dc-4e36-b3a8-11eb6cdf72c7",
+                            "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps2'"
+                        },
+                        "Regions.EconomicProperty": {
+                            "EconomicProperty.inflationRate": 10.2,
+                            "EconomicProperty.taxRate": 28.0,
+                            "Ravens.CimObjectType": "EconomicProperty",
+                            "EconomicProperty.Regions": [
+                                "County2"
+                            ],
+                            "IdentifiedObject.name": "CountyEconomicProperties",
+                            "IdentifiedObject.mRID": "290f8ed6-2588-4647-bef6-0a83f93d768e",
+                            "EconomicProperty.discountRate": 6.8
+                        },
+                        "SubGeographicalRegion.Region": "#_a513faee-2e68-4416-9d53-756f6d79e9f4",
+                        "Ravens.CimObjectType": "SubGeographicalRegion",
+                        "IdentifiedObject.name": "Region2_SubRegion",
+                        "IdentifiedObject.mRID": "_7baa2ac0-af2e-4316-8fe3-4c9e000395b2"
+                    }
+                ]
+            }
+        }
+    },
+    "EnergyPrices": {
+        "CapacityPrices": {
+            "capacityprices1": {
+                "CapacityPrices.CapacityPriceCurve": {
+                    "y1Unit": "USD",
+                    "PriceCurve.CurveDatas": [],
+                    "xUnit": "h",
+                    "IdentifiedObject.name": "capacityprices1Curve",
+                    "IdentifiedObject.mRID": "4f8bbd63-0cd0-40c3-b7ac-3156b666f938"
+                },
+                "EnergyPrices.Regions": [
+                    "Region1"
+                ],
+                "RavensModel.CimObjectType": "Ravens.CapacityPrices",
+                "IdentifiedObject.name": "capacityprices1",
+                "IdentifiedObject.mRID": "5407c621-70bb-4ff2-85ca-8cee8a84d10a"
+            },
+            "capacityprices2": {
+                "CapacityPrices.CapacityPriceCurve": {
+                    "y1Unit": "USD",
+                    "PriceCurve.CurveDatas": [],
+                    "xUnit": "h",
+                    "IdentifiedObject.name": "capacityprices2Curve",
+                    "IdentifiedObject.mRID": "29174a07-6a13-43c0-801b-9b137e749f6e"
+                },
+                "EnergyPrices.Regions": [
+                    "Region2"
+                ],
+                "RavensModel.CimObjectType": "Ravens.CapacityPrices",
+                "IdentifiedObject.name": "capacityprices2",
+                "IdentifiedObject.mRID": "e52efa88-86f2-4ea0-8369-8b1cae33590e"
+            }
+        },
+        "LocationalMarginalPrices": {
+            "lmps2": {
+                "EnergyPrices.Regions": [
+                    "Region2"
+                ],
+                "RavensModel.CimObjectType": "Ravens.LocationalMarginalPrices",
+                "LocationalMarginalPrices.LMPCurve": {
+                    "y1Unit": "USD",
+                    "PriceCurve.CurveDatas": [],
+                    "xUnit": "h",
+                    "IdentifiedObject.name": "lmp2Curve",
+                    "IdentifiedObject.mRID": "7d670983-e385-4e18-ab2b-91c65aa3c72f"
+                },
+                "IdentifiedObject.name": "lmp2",
+                "IdentifiedObject.mRID": "fc0ebc85-adc8-42df-bcfb-09cdd0f07207"
+            },
+            "lmps1": {
+                "EnergyPrices.Regions": [
+                    "Region1"
+                ],
+                "RavensModel.CimObjectType": "Ravens.LocationalMarginalPrices",
+                "LocationalMarginalPrices.LMPCurve": {
+                    "y1Unit": "USD",
+                    "PriceCurve.CurveDatas": [],
+                    "xUnit": "h",
+                    "IdentifiedObject.name": "lmp1Curve",
+                    "IdentifiedObject.mRID": "4919302c-135b-429e-afe2-ad3cbd0479a3"
+                },
+                "IdentifiedObject.name": "lmp1",
+                "IdentifiedObject.mRID": "8f78e131-a843-4f12-9f32-c9f170f1f2cb"
+            }
+        }
+    },
+    "OutageScenario": {
+        "outagescenario1": {
+            "OutageScenario.loadFractionCritical": 100.0,
+            "OutageScenario.loadFractionTotal": 30.0,
+            "OutageScenario.anticipatedStartDay": "--03-01",
+            "OutageScenario.anticipatedDuration": "P6H",
+            "IdentifiedObject.name": "outagescenario1",
+            "IdentifiedObject.mRID": "34e98fc7-4034-466e-b858-8e8d9535f1f1",
+            "OutageScenario.anticipatedStartHour": 10
+        },
+        "outagescenario2": {
+            "OutageScenario.loadFractionCritical": 100.0,
+            "OutageScenario.loadFractionTotal": 20.0,
+            "OutageScenario.anticipatedStartDay": "--04-01",
+            "OutageScenario.anticipatedDuration": "P6H",
+            "IdentifiedObject.name": "outagescenario2",
+            "IdentifiedObject.mRID": "ad01aace-311e-4254-b798-e6c16ee4a613",
+            "OutageScenario.anticipatedStartHour": 12
+        }
+    },
+    "DesignAlgorithmProperties": {
+        "DesignAlgorithmProperties.ProposedEnergyProducerOptions": [
+            "proposedPV1",
+            "proposedESS1"
+        ],
+        "DesignAlgorithmProperties.analysisPeriod": "P25Y",
+        "IdentifiedObject.name": "DesignAlgorithmProperties",
+        "IdentifiedObject.mRID": "c23252a0-cd95-4f64-88e8-4553aa9e1cf6"
+    },
+    "ProposedSiteLocation": {
+        "proposedSite2": {
+            "ProposedSiteLocation.availableArea": 2000.0,
+            "Group.LoadGroup": "LoadGroup::'IndustrialGroup'",
+            "RavensModel.CimObjectType": "Ravens.ProposedSiteLocation",
+            "Group.GeographicalRegion": "GeographicalRegion::'Region2'",
+            "Location.PositionPoints": [
+                {
+                    "PositionPoint.xPosition": 28,
+                    "RavensModel.CimObjectType": "PositionPoint",
+                    "PositionPoint.yPosition": 34,
+                    "PositionPoint.sequenceNumber": 1,
+                    "IdentifiedObject.mRID": "13473e69-df75-4052-bdfe-76a7400ab792"
+                }
+            ],
+            "IdentifiedObject.name": "proposedSite2",
+            "IdentifiedObject.mRID": "493872f0-a57d-4906-aa41-a2244cd43647"
+        },
+        "proposedSite1": {
+            "ProposedSiteLocation.availableArea": 101171.5,
+            "Group.LoadGroup": "LoadGroup::'ResidentialGroup'",
+            "RavensModel.CimObjectType": "Ravens.ProposedSiteLocation",
+            "Group.GeographicalRegion": "GeographicalRegion::'Region1'",
+            "Location.PositionPoints": [
+                {
+                    "PositionPoint.xPosition": -88.0616067,
+                    "RavensModel.CimObjectType": "PositionPoint",
+                    "PositionPoint.yPosition": 41.8332617,
+                    "PositionPoint.sequenceNumber": 1,
+                    "IdentifiedObject.mRID": "704184d0-6fc1-4f99-8d14-9e51cef1a206"
+                }
+            ],
+            "IdentifiedObject.name": "proposedSite1",
+            "IdentifiedObject.mRID": "A9C5BFEE-FFFB-4CDC-94EC-813291D042A4"
+        }
+    }
+}
