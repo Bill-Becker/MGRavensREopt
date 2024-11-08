@@ -29,7 +29,7 @@ DotEnv.load!()
 # Only need the line below if calling this .jl file from within Julia, as opposed to command line executing which takes the CLI ARGS
 ARGS_local = deepcopy(Base.ARGS)
 if isempty(ARGS_local)
-    ARGS_local = ["lehigh_example_origECLoads.json", "mgravens_out_origECLoads.json"]
+    ARGS_local = ["REopt_Lehigh_v4.json", "REopt_Lehigh_v4.json"]
 end
 
 # Load in the MG-Ravens .json schema file, which is the only user input and customized for the scenario to run
@@ -79,7 +79,7 @@ mgravens = JSON.parsefile(input_file_path)
 # end
 
 # Convert MG-Ravens data schema into REopt schema
-reopt_inputs = REopt.convert_mgravens_inputs_to_reopt_inputs(mgravens)
+reopt_inputs = convert_mgravens_inputs_to_reopt_inputs(mgravens)
 
 open("converted_to_reopt_inputs.json","w") do f
     JSON.print(f, reopt_inputs)
@@ -94,6 +94,7 @@ reopt_results = run_reopt([m1, m2], inputs)
 
 # Convert/add/update MG-Ravens data with REopt results
 # Write to output_file_path .json file (2nd argument when running this script from the command line)
+# Should NOT need to use "REopt.[function] to have Revise reflect locally updated code right away (no restart)
 update_mgravens_with_reopt_results!(reopt_results, mgravens)
 
 output_file_path = ARGS_local[2]
