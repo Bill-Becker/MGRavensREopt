@@ -1,0 +1,505 @@
+{
+  "Versions": {
+    "IEC61970CIMVersion": {
+      "IEC61970CIMVersion.version": "IEC61970CIM100",
+      "IEC61970CIMVersion.date": "2019-04-01",
+      "Ravens.cimObjectType": "IEC61970CIMVersion"
+    }
+  },
+  "AlgorithmProperties": {
+    "DesignAlgorithmProperties": {
+      "DesignAlgorithmProperties_1": {
+        "DesignAlgorithmProperties.energyAvailabilityLimit": 95.0,
+        "DesignAlgorithmProperties.purchaseCostMax": {
+          "unit": "USD",
+          "value": 10000.0
+        },
+        "DesignAlgorithmProperties.purchaseCostObjective": {
+          "unit": "USD",
+          "value": 9000.0
+        },
+        "AlgorithmProperties.workingDirectory": "/tmp/a7880c4d-d916-48b3-b45c-85cbc956243e",
+        "DesignAlgorithmProperties.analysisPeriod": "P25Y",
+        "IdentifiedObject.name": "DesignAlgorithmProperties_1",
+        "IdentifiedObject.mRID": "c23252a0-cd95-4f64-88e8-4553aa9e1cf6",
+        "DesignAlgorithmProperties.energyAvailabilityObjective": 100.0
+      }
+    }
+  },
+  "ProposedSiteLocations": {
+    "proposedSite1": {
+      "ProposedSiteLocation.availableArea": 1000.0,
+      "Ravens.cimObjectType": "ProposedSiteLocation",
+      "ProposedSiteLocation.Region": "SubGeographicalRegion::'lehigh_SubRegion'",
+      "Location.PositionPoints": [
+        {
+          "PositionPoint.xPosition": -89.6501,
+          "Ravens.cimObjectType": "PositionPoint",
+          "PositionPoint.yPosition": 39.7817,
+          "PositionPoint.sequenceNumber": 1,
+          "IdentifiedObject.mRID": "704184d0-6fc1-4f99-8d14-9e51cef1a206"
+        }
+      ],
+      "IdentifiedObject.name": "proposedSite1",
+      "IdentifiedObject.mRID": "A9C5BFEE-FFFB-4CDC-94EC-813291D042A4",
+      "ProposedSiteLocation.LoadGroup": [
+        "LoadGroup::'ResidentialGroup'"
+      ]
+    }
+  },
+  "Location": {
+    "670a_residential2_Loc": {
+      "Ravens.cimObjectType": "Location",
+      "Location.PositionPoints": [
+        {
+          "PositionPoint.xPosition": -84.073493,
+          "PositionPoint.yPosition": 30.285013,
+          "Ravens.cimObjectType": "PositionPoint",
+          "PositionPoint.sequenceNumber": 1
+        }
+      ],
+      "IdentifiedObject.name": "670a_residential2_Loc",
+      "IdentifiedObject.mRID": "_92F3F95D-6FE1-46A7-BE96-3E3F9CCC95EC",
+      "Location.CoordinateSystem": "CoordinateSystem::'lehigh_CrsUrn'"
+    },
+    "675c_residential1_Loc": {
+      "Ravens.cimObjectType": "Location",
+      "Location.PositionPoints": [
+        {
+          "PositionPoint.xPosition": -84.074493,
+          "PositionPoint.yPosition": 30.287013,
+          "Ravens.cimObjectType": "PositionPoint",
+          "PositionPoint.sequenceNumber": 1
+        }
+      ],
+      "IdentifiedObject.name": "675c_residential1_Loc",
+      "IdentifiedObject.mRID": "_445DFD14-595D-4D25-9F89-E6D9F417E008",
+      "Location.CoordinateSystem": "CoordinateSystem::'lehigh_CrsUrn'"
+    }
+  },
+  "ProposedAssetOption": {
+    "ProposedEnergyProducerOption": {
+      "proposedESS1": {
+        "ProposedBatteryUnitOption.dischargeRate": 60000.0,
+        "ProposedBatteryUnitOption.dischargeEfficiency": 92.0,
+        "ProposedBatteryUnitOption.stateOfChargeMax": 100.0,
+        "ProposedBatteryUnitOption.requiredOption": "false",
+        "Ravens.cimObjectType": "ProposedBatteryUnitOption",
+        "IdentifiedObject.mRID": "339b031a-2ea9-4816-b5e1-d867a9077b72",
+        "ProposedAssetOption.operationsAndMaintenanceRateFixed": {
+          "unit": "USD",
+          "value": 50000
+        },
+        "ProposedAssetOption.fixedPrice": {
+          "unit": "USD",
+          "value": 1000000
+        },
+        "ProposedBatteryUnitOption.energyDurationMax": 1.0,
+        "ProposedBatteryUnitOption.chargeRate": 60000.0,
+        "ProposedAssetOption.ProposedLocations": [
+          "proposedSite1"
+        ],
+        "ProposedBatteryUnitOption.powerDiscretization": 50000,
+        "ProposedAssetOption.lifetime": "P25Y",
+        "ProposedBatteryUnitOption.chargeEfficiency": 92.0,
+        "IdentifiedObject.name": "proposedESS1",
+        "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
+        "ProposedAssetOption.ProposedConnectivityNodes": [
+          "ConnectivityNode::'670'"
+        ],
+        "ProposedBatteryUnitOption.stateOfChargeMin": 20.0,
+        "ProposedBatteryUnitOption.decayRate": 0.5,
+        "ProposedEnergyProducerOption.powerCapacityMax": 150000.0,
+        "ProposedBatteryUnitOption.InverterController": {
+          "VoltVarControlMode.VoltVarControlCurve": {
+            "Curve.CurveDatas": [
+              {
+                "CurveData.y1value": 60000.0,
+                "CurveData.xvalue": 2304.0
+              },
+              {
+                "CurveData.y1value": 0.0,
+                "CurveData.xvalue": 2376.0
+              },
+              {
+                "CurveData.y1value": 0.0,
+                "CurveData.xvalue": 2424.0
+              },
+              {
+                "CurveData.y1value": -60000.0,
+                "CurveData.xvalue": 2472.0
+              }
+            ],
+            "Curve.xUnit": "v",
+            "Curve.yUnit": "var",
+            "IdentifiedObject.name": "VoltVarControlCurve",
+            "IdentifiedObject.mRID": "05591a7d-0767-4521-b87b-958803322835"
+          },
+          "DroopControlMode.p": 0.0,
+          "ConstantPFControlMode.powerFactorSetpoint": 1.0,
+          "DroopControlMode.q": 0.0
+        }
+      },
+      "proposedPV1": {
+        "Ravens.cimObjectType": "ProposedPhotovoltaicUnitOption",
+        "IdentifiedObject.mRID": "d6910f52-7455-4074-9d94-e0851cf131db",
+        "ProposedEnergyProducerOption.variablePrice": {
+          "unit": "USD",
+          "value": 1000.0
+        },
+        "ProposedEnergyProducerOption.operationsAndMaintenanceRateFixed": {
+          "unit": "USD",
+          "value": 10.0
+        },
+        "ProposedEnergyProducerOption.operationsAndMaintenanceRateVariable": {
+          "unit": "USD",
+          "value": 100.0
+        },
+        "ProposedAssetOption.ProposedLocations": [
+          "proposedSite1"
+        ],
+        "ProposedAssetOption.lifetime": "P25Y",
+        "IdentifiedObject.name": "proposedPV1",
+        "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
+        "ProposedAssetOption.ProposedConnectivityNodes": [
+          "ConnectivityNode::'670'"
+        ],
+        "ProposedPhotovoltaicUnitOption.GenerationProfile": {
+          "Curve.CurveDatas": [
+            {
+                "CurveData.y1value": 0.0,
+                "CurveData.xvalue": 0
+            },
+            {
+                "CurveData.y1value": 0.0,
+                "CurveData.xvalue": 1
+            }
+          ]
+        },
+        "ProposedEnergyProducerOption.powerCapacityMax": 1.0e6
+      }
+    }
+  },
+  "Group": {
+    "LoadGroup": {
+      "ResidentialGroup": {
+        "LoadGroup.EnergyConsumers": [
+          "EnergyConsumer::'670a_residential2'"
+        ],
+        "Ravens.cimObjectType": "LoadGroup",
+        "IdentifiedObject.name": "ResidentialGroup",
+        "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb"
+      }
+    },
+    "ProposedAssetSet": {
+      "BusinessAsUsual": {
+        "Ravens.cimObjectType": "ProposedAssetSet",
+        "ProposedAssetSet.ProposedAssets": [],
+        "ProposedAssetSet.Application": "Application::'REopt'",
+        "IdentifiedObject.name": "BusinessAsUsual",
+        "IdentifiedObject.mRID": "56e75ac7-e609-4a73-afdf-a129afd13e6b",
+        "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'BusinessAsUsual'"
+      },
+      "Optimal": {
+        "Ravens.cimObjectType": "ProposedAssetSet",
+        "ProposedAssetSet.ProposedAssets": [
+          "ProposedEnergyProducerAsset::'REopt_PV'",
+          "ProposedBatteryUnit::'REopt_ESS'"
+        ],
+        "ProposedAssetSet.Application": "Application::'REopt'",
+        "IdentifiedObject.name": "Optimal",
+        "IdentifiedObject.mRID": "9b788e28-edd3-4556-80f9-3c8d63852d93",
+        "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'Optimal'"
+      }
+    },
+    "SubGeographicalRegion": {
+      "lehigh_SubRegion": {
+        "SubGeographicalRegion.Region": "GeographicalRegion::'lehigh_Region'",
+        "Ravens.cimObjectType": "SubGeographicalRegion",
+        "IdentifiedObject.name": "lehigh_SubRegion",
+        "IdentifiedObject.mRID": "_2BB7016C-8D41-4620-AD7E-A2CF1E0990DC"
+      }
+    },
+    "GeographicalRegion": {
+      "lehigh_Region": {
+        "Ravens.cimObjectType": "GeographicalRegion",
+        "IdentifiedObject.name": "lehigh_Region",
+        "IdentifiedObject.mRID": "_8383E42C-11FF-412E-9AEE-8A22334BBDB6",
+        "GeographicalRegion.Regions": [
+          {
+            "Regions.EnergyPrices": {
+              "Ravens.cimObjectType": "EnergyPrices",
+              "EnergyPrices.CapacityPrices": "CapacityPrices::'capacityprices_lehigh'",
+              "IdentifiedObject.name": "energyprices_lehigh",
+              "IdentifiedObject.mRID": "_f9921f2f-65dc-4e36-b3a8-11eb6cdf72c7",
+              "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps_lehigh'"
+            },
+            "Regions.EconomicProperty": {
+              "EconomicProperty.inflationRate": 10.2,
+              "IdentifiedObject.name": "CountyEconomicProperties",
+              "Ravens.cimObjectType": "EconomicProperty",
+              "EconomicProperty.Regions": [
+                "lehigh_Region"
+              ],
+              "EconomicProperty.taxRate": 28.0,
+              "IdentifiedObject.mRID": "290f8ed6-2588-4647-bef6-0a83f93d768e",
+              "EconomicProperty.discountRate": 6.8
+            },
+            "SubGeographicalRegion.Region": "#_a513faee-2e68-4416-9d53-756f6d79e9f4",
+            "Ravens.cimObjectType": "SubGeographicalRegion",
+            "IdentifiedObject.name": "lehigh_SubRegion",
+            "IdentifiedObject.mRID": "_7baa2ac0-af2e-4316-8fe3-4c9e000395b2"
+          }
+        ]
+      }
+    }
+  },
+  "EnergyPrices": {
+    "CapacityPrices": {
+      "capacityprices_lehigh": {
+        "CapacityPrices.CapacityPriceCurve": {
+          "y1Unit": "USD",
+          "PriceCurve.CurveDatas": [
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 0
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 1
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 2
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 3
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 4
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 5
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 6
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 7
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 8
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 9
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 10
+            },
+            {
+              "CurveData.y1value": 20,
+              "CurveData.xvalue": 11
+            }
+          ],
+          "xUnit": "h",
+          "IdentifiedObject.name": "capacityprices_lehigh_Curve",
+          "IdentifiedObject.mRID": "4f8bbd63-0cd0-40c3-b7ac-3156b666f938"
+        },
+        "EnergyPrices.Regions": [
+          "lehigh_Region"
+        ],
+        "Ravens.cimObjectType": "CapacityPrices",
+        "IdentifiedObject.name": "capacityprices_lehigh",
+        "IdentifiedObject.mRID": "5407c621-70bb-4ff2-85ca-8cee8a84d10a"
+      }
+    },
+    "LocationalMarginalPrices": {
+      "lmps_lehigh": {
+        "EnergyPrices.Regions": [
+          "lehigh_Region"
+        ],
+        "Ravens.cimObjectType": "LocationalMarginalPrices",
+        "LocationalMarginalPrices.LMPCurve": {
+          "xUnit": "h",
+          "y1Unit": "USD",
+          "IdentifiedObject.name": "lmps_lehigh_Curve",
+          "IdentifiedObject.mRID": "4919302c-135b-429e-afe2-ad3cbd0479a3",
+          "PriceCurve.CurveDatas": [
+            {
+                "CurveData.y1value": 0.1,
+                "CurveData.xvalue": 0
+            },
+            {
+                "CurveData.y1value": 0.1,
+                "CurveData.xvalue": 1
+            }
+          ]
+        }
+      }
+    }
+  },
+  "OutageScenario": {
+    "outagescenario3": {
+      "OutageScenario.loadFractionCritical": 50.0,
+      "OutageScenario.loadFractionTotal": 20.0,
+      "OutageScenario.anticipatedStartDay": "--08-12",
+      "OutageScenario.anticipatedDuration": "P48H",
+      "OutageScenario.anticipatedStartHour": 14,
+      "IdentifiedObject.mRID": "ad01aace-311e-4254-b798-e6c16ee4a613",
+      "IdentifiedObject.name": "outagescenario2"
+    },
+    "outagescenario1": {
+      "OutageScenario.loadFractionCritical": 50.0,
+      "OutageScenario.loadFractionTotal": 30.0,
+      "OutageScenario.anticipatedStartDay": "--01-17",
+      "OutageScenario.anticipatedDuration": "P48H",
+      "OutageScenario.anticipatedStartHour": 9,
+      "IdentifiedObject.mRID": "34e98fc7-4034-466e-b858-8e8d9535f1f1",
+      "IdentifiedObject.name": "outagescenario1"
+    },
+    "outagescenario4": {
+      "OutageScenario.loadFractionCritical": 50.0,
+      "OutageScenario.loadFractionTotal": 20.0,
+      "OutageScenario.anticipatedStartDay": "--09-13",
+      "OutageScenario.anticipatedDuration": "P48H",
+      "OutageScenario.anticipatedStartHour": 14,
+      "IdentifiedObject.mRID": "ad01aace-311e-4254-b798-e6c16ee4a613",
+      "IdentifiedObject.name": "outagescenario2"
+    },
+    "outagescenario2": {
+      "OutageScenario.loadFractionCritical": 50.0,
+      "OutageScenario.loadFractionTotal": 20.0,
+      "OutageScenario.anticipatedStartDay": "--05-29",
+      "OutageScenario.anticipatedDuration": "P48H",
+      "OutageScenario.anticipatedStartHour": 14,
+      "IdentifiedObject.mRID": "ad01aace-311e-4254-b798-e6c16ee4a613",
+      "IdentifiedObject.name": "outagescenario2"
+    }
+  },
+  "BasicIntervalSchedule": {
+    "670a_residential2_shape": {
+      "EnergyConsumerSchedule.startDay": "Monday",
+      "BasicIntervalSchedule.value2Multiplier": "k",
+      "BasicIntervalSchedule.value1Multiplier": "k",
+      "Ravens.cimObjectType": "EnergyConsumerSchedule",
+      "BasicIntervalSchedule.value2Unit": "VAr",
+      "BasicIntervalSchedule.value1Unit": "W",
+      "EnergyConsumerSchedule.RegularTimePoints": [
+        {
+          "RegularTimePoint.sequenceNumber": 1,
+          "RegularTimePoint.value2": 0.0,
+          "RegularTimePoint.value1": 76.6992804
+        },
+        {
+          "RegularTimePoint.sequenceNumber": 2,
+          "RegularTimePoint.value2": 0.0,
+          "RegularTimePoint.value1": 79.62543428
+        }
+      ],
+      "IdentifiedObject.mRID": "926ea047-a4ae-4a28-9271-4d9d36274b86",
+      "EnergyConsumerSchedule.timeStep": 3600
+    },
+    "675c_residential1_shape": {
+      "EnergyConsumerSchedule.startDay": "Monday",
+      "BasicIntervalSchedule.value2Multiplier": "k",
+      "BasicIntervalSchedule.value1Multiplier": "k",
+      "Ravens.cimObjectType": "EnergyConsumerSchedule",
+      "BasicIntervalSchedule.value2Unit": "VAr",
+      "BasicIntervalSchedule.value1Unit": "W",
+      "EnergyConsumerSchedule.RegularTimePoints": [],
+      "IdentifiedObject.mRID": "053106cf-4f0e-4e9a-bb01-0b15934cb81e",
+      "EnergyConsumerSchedule.timeStep": 3600
+    }
+  },
+  "ProposedAsset": {
+    "REopt_PV": {
+      "ProposedEnergyProducerAsset.capacity": {
+        "unit": "W",
+        "value": 503.7824,
+        "multiplier": "k"
+      },
+      "ProposedAsset.EstimatedCosts": "EstimatedCost::'Optimal'",
+      "ProposedAsset.ProposedAssetOption": "ProposedPhotovoltaicUnitOption::'proposedPV1'",
+      "ProposedEnergyProducerAsset.PowerDispatchCurve": {
+        "Curve.CurveDatas": [
+            {
+                "CurveData.y1value": 0.0,
+                "CurveData.xvalue": 0
+            },
+            {
+              "CurveData.y1value": 0.0,
+              "CurveData.xvalue": 1
+            }            
+          ]
+        },
+      "Ravens.cimObjectType": "ProposedEnergyProducerAsset",
+      "IdentifiedObject.name": "REopt_PV",
+      "IdentifiedObject.mRID": "878b594a-0a01-4c08-9b6b-3e48f07bc6bf"
+    },
+    "REopt_ESS": {
+      "ProposedEnergyProducerAsset.capacity": {
+        "unit": "W",
+        "value": 139.79,
+        "multiplier": "k"
+      },
+      "ProposedAsset.EstimatedCosts": "EstimatedCost::::'Optimal'",
+      "ProposedAsset.ProposedAssetOption": "ProposedBatteryUnitOption::'proposedESS1'",
+      "Ravens.cimObjectType": "ProposedBatteryUnit",
+      "ProposedBatteryUnit.energyCapacity": {
+        "unit": "Wh",
+        "value": 2210.68,
+        "multiplier": "k"
+      },
+      "IdentifiedObject.name": "REopt_ESS",
+      "IdentifiedObject.mRID": "19d0961e-8c25-4365-b6c0-c30158c31001"
+    }
+  },
+  "EstimatedCost": {
+    "BusinessAsUsual": {
+      "EstimatedCost.netPresentValue": 0.0,
+      "EstimatedCost.lifecycleEnergyCost": 864866.1,
+      "Ravens.cimObjectType": "EstimatedCost",
+      "EstimatedCost.lifecycleCapacityCost": 439482.49,
+      "EstimatedCost.lifecycleCapitalCost": 0.0,
+      "IdentifiedObject.name": "BusinessAsUsual",
+      "IdentifiedObject.mRID": "e8c003ea-7319-4b29-ab90-fe1c8dc41a5c",
+      "EstimatedCost.lifecycleCost": 1.3507587368e6
+    },
+    "Optimal": {
+      "EstimatedCost.netPresentValue": -760393.51,
+      "EstimatedCost.lifecycleEnergyCost": 280234.11,
+      "Ravens.cimObjectType": "EstimatedCost",
+      "EstimatedCost.lifecycleCapacityCost": 146301.65,
+      "EstimatedCost.lifecycleCapitalCost": 1.5448240826e6,
+      "IdentifiedObject.name": "Optimal",
+      "IdentifiedObject.mRID": "c7444e06-e1b2-401d-a9a1-fae37df92e15",
+      "EstimatedCost.lifecycleCost": 2.1111522474e6
+    }
+  },
+  "Message": [
+    {
+      "Message.Application": {
+        "Application.applicationName": "REopt"
+      },
+      "Ravens.cimObjectType": "Warning",
+      "Message.message": "Any[(\"core_reopt.jl_668\", Any[\"Adding binary variable to model outages. Some solvers are very slow with integer variables\", \"Adding binary variable to model outages. Some solvers are very slow with integer variables\"]), (\"core_electric_utility.jl_321\", Any[\"When using stochastic outage modeling (i.e. outage_start_time_steps, outage_durations, outage_probabilities), \\n                    emissions and renewable energy percentage calculations and constraints do not consider outages.\"])]",
+      "IdentifiedObject.mRID": "1a0764c3-98f6-42b6-9a8e-4e6f369b33b4"
+    },
+    {
+      "Message.Application": {
+        "Application.applicationName": "REopt"
+      },
+      "Ravens.cimObjectType": "Error",
+      "Message.message": "Any[]",
+      "IdentifiedObject.mRID": "7c48ed1d-cc71-4c24-82c3-38727dca7417"
+    }
+  ]
+}
