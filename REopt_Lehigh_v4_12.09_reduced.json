@@ -232,7 +232,8 @@
               "EnergyPrices.CapacityPrices": "CapacityPrices::'capacityprices_lehigh'",
               "IdentifiedObject.name": "energyprices_lehigh",
               "IdentifiedObject.mRID": "_f9921f2f-65dc-4e36-b3a8-11eb6cdf72c7",
-              "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps_lehigh'"
+              "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps_lehigh'",
+              "EnergyPrices.CoincidentPeakPrices": "CoincidentPeakPrices::'coincidentpeakprices_lehigh'"
             },
             "Regions.EconomicProperty": {
               "EconomicProperty.inflationRate": 10.2,
@@ -318,6 +319,32 @@
         ],
         "Ravens.cimObjectType": "CapacityPrices",
         "IdentifiedObject.name": "capacityprices_lehigh",
+        "IdentifiedObject.mRID": "5407c621-70bb-4ff2-85ca-8cee8a84d10a"
+      }
+    },
+    "CoincidentPeakPrices": {
+      "coincidentpeakprices_lehigh": {
+        "CoincidentPeakPrices.CoincidentPeakPriceCurve": {
+          "y1Unit": "USD",
+          "PriceCurve.CurveDatas": [
+            {
+              "CurveData.y1value": 10,
+              "CurveData.xvalue": [8500, 400, 1200]
+            },
+            {
+              "CurveData.y1value": 25,
+              "CurveData.xvalue": [5000, 5500, 6000]
+            }
+          ],
+          "xUnit": "h",
+          "IdentifiedObject.name": "coincidentpeakprices_lehigh_Curve",
+          "IdentifiedObject.mRID": "4f8bbd63-0cd0-40c3-b7ac-3156b666f938"
+          },
+        "EnergyPrices.Regions": [
+          "lehigh_Region"
+        ],
+        "Ravens.cimObjectType": "CoincidentPeakPrices",
+        "IdentifiedObject.name": "coincidentpeakprices_lehigh",
         "IdentifiedObject.mRID": "5407c621-70bb-4ff2-85ca-8cee8a84d10a"
       }
     },

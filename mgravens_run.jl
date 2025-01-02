@@ -4,6 +4,7 @@ using JuMP
 using HiGHS
 using REopt
 using DelimitedFiles
+using Logging
 using DotEnv
 DotEnv.load!()
 
@@ -46,9 +47,14 @@ end
 # Run REopt and get results into REopt schema dictionary
 s = Scenario(reopt_inputs)
 inputs = REoptInputs(s)
-m1 = Model(optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.005, "output_flag" => false, "log_to_console" => false))
-m2 = Model(optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.005, "output_flag" => false, "log_to_console" => false))
-reopt_results = run_reopt([m1, m2], inputs)
+reopt_results = Dict()
+logger = SimpleLogger()  # This is helpful for 15-minute interval analysis which JuMP floods the logs with warnings
+with_logger(logger) do
+    m1 = Model(optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.005, "output_flag" => false, "log_to_console" => false))
+    m2 = Model(optimizer_with_attributes(HiGHS.Optimizer, "mip_rel_gap" => 0.005, "output_flag" => false, "log_to_console" => false))
+    # Have to do "global" here to overwrite the reopt_results dictionary defined outside of the with_logger loop
+    global reopt_results = run_reopt([m1, m2], inputs)
+end
 
 # Convert/add/update MG-Ravens data with REopt results
 # Write to output_file_path .json file (2nd argument when running this script from the command line)
