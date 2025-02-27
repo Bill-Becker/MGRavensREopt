@@ -1,0 +1,24 @@
+{
+    "LocationalMarginalPrices": {
+        "lmps_name": {
+            "IdentifiedObject.mRID": "8f78e131-a843-4f12-9f32-c9f170f1f2cb",
+            "IdentifiedObject.name": "lmps_name",
+            "Ravens.cimObjectType": "Ravens.LocationalMarginalPrices",
+            "EnergyPrices.Regions": [
+                "name_Region"
+            ],
+            "LocationalMarginalPrices.LMPCurve": {
+                "IdentifiedObject.mRID": "4919302c-135b-429e-afe2-ad3cbd0479a3",
+                "IdentifiedObject.name": "lmps_name_Curve",
+                "xUnit": "h",
+                "y1Unit": "USD",
+                "PriceCurve.CurveDatas": [
+                    {
+                        "CurveData.y1value": 0.1,
+                        "CurveData.xvalue": 0
+                    }
+                ]
+            }
+        }
+    }
+}

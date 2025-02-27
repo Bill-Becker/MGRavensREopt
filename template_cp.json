@@ -1,0 +1,23 @@
+{
+  "CoincidentPeakPrices": {
+    "coincidentpeakprices_name": {
+      "CoincidentPeakPrices.CoincidentPeakPriceCurve": {
+        "y1Unit": "USD",
+        "PriceCurve.CurveDatas": [
+          {
+            "CurveData.y1value": 10,
+            "CurveData.xvalue": 8500
+          }
+        ],
+        "xUnit": "h",
+        "IdentifiedObject.name": "coincidentpeakprices_name_Curve",
+        "IdentifiedObject.mRID": "4f8bbd63-0cd0-40c3-b7ac-3156b666f938"
+      },
+      "EnergyPrices.Regions": ["name_Region"],
+      "Ravens.cimObjectType": "CoincidentPeakPrices",
+      "IdentifiedObject.name": "coincidentpeakprices_name",
+      "IdentifiedObject.mRID": "5407c621-70bb-4ff2-85ca-8cee8a84d10a"
+    }
+  }
+}
+
