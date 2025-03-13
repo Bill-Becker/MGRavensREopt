@@ -5528,7 +5528,7 @@
           "unit": "USD",
           "value": 10.0
         },
-        "ProposedEnergyProducerOption.powerCapacityMax": 1.0e6,
+        "ProposedEnergyProducerOption.powerCapacityMax": 1.0e8,
         "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
         "ProposedEnergyProducerOption.variablePrice": {
           "value": 1000.0,
@@ -40586,10 +40586,14 @@
         "ProposedAssetOption.ProposedLocations": [
           "ProposedSiteLocations::'proposedSite1'"
         ],
-        "ProposedAssetOption.fixedPrice": {
-          "value": 1000000,
-          "unit": "USD"
-        },
+        "ProposedEnergyProducerOption.variablePrice": {
+          "unit": "USD",
+          "value": 600.0
+      },        
+        "ProposedBatteryUnitOption.variableEnergyPrice": {
+          "unit": "USD",
+          "value": 400.0
+      },
         "ProposedAssetOption.operationsAndMaintenanceRateFixed": {
           "value": 50000,
           "unit": "USD"
@@ -40599,8 +40603,10 @@
         ],
         "ProposedAssetOption.lifetime": "P25Y",
         "ProposedBatteryUnitOption.energyDurationMax": 1.0,
-        "ProposedEnergyProducerOption.powerCapacityMin": 50000.0,
-        "ProposedEnergyProducerOption.powerCapacityMax": 150000.0,
+        "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
+        "ProposedEnergyProducerOption.powerCapacityMax": 100000.0,
+        "ProposedBatteryUnitOption.energyCapacityMin": 0.0,
+        "ProposedBatteryUnitOption.energyCapacityMax": 100000.0,        
         "ProposedBatteryUnitOption.stateOfChargeMin": 20.0,
         "ProposedBatteryUnitOption.stateOfChargeMax": 100.0,
         "ProposedBatteryUnitOption.chargeRate": 60000.0,
