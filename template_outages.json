@@ -1,0 +1,40 @@
+{
+    "OutageScenario": {
+        "outagescenario3": {
+            "OutageScenario.loadFractionCritical": 50.0,
+            "OutageScenario.loadFractionTotal": 20.0,
+            "OutageScenario.anticipatedStartDay": "--08-12",
+            "OutageScenario.anticipatedDuration": "P2H",
+            "OutageScenario.anticipatedStartHour": 14,
+            "IdentifiedObject.name": "outagescenario3",
+            "IdentifiedObject.mRID": "3dc75f27-42ab-40ce-a019-67e7cf09d707"
+        },
+        "outagescenario1": {
+            "OutageScenario.loadFractionCritical": 50.0,
+            "OutageScenario.loadFractionTotal": 30.0,
+            "OutageScenario.anticipatedStartDay": "--01-17",
+            "OutageScenario.anticipatedDuration": "P2H",
+            "OutageScenario.anticipatedStartHour": 9,
+            "IdentifiedObject.name": "outagescenario1",
+            "IdentifiedObject.mRID": "34e98fc7-4034-466e-b858-8e8d9535f1f1"
+        },
+        "outagescenario4": {
+            "OutageScenario.loadFractionCritical": 50.0,
+            "OutageScenario.loadFractionTotal": 20.0,
+            "OutageScenario.anticipatedStartDay": "--09-13",
+            "OutageScenario.anticipatedDuration": "P2H",
+            "OutageScenario.anticipatedStartHour": 14,
+            "IdentifiedObject.name": "outagescenario4",
+            "IdentifiedObject.mRID": "ac13d698-ed90-4232-a525-2838224af054"
+        },
+        "outagescenario2": {
+            "OutageScenario.loadFractionCritical": 50.0,
+            "OutageScenario.loadFractionTotal": 20.0,
+            "OutageScenario.anticipatedStartDay": "--05-29",
+            "OutageScenario.anticipatedDuration": "P2H",
+            "OutageScenario.anticipatedStartHour": 14,
+            "IdentifiedObject.name": "outagescenario2",
+            "IdentifiedObject.mRID": "ad01aace-311e-4254-b798-e6c16ee4a613"
+        }
+    }
+}

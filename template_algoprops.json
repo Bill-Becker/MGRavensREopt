@@ -1,0 +1,15 @@
+{
+    "AlgorithmProperties": {
+    "algo1": {
+      "IdentifiedObject.mRID": "c23252a0-cd95-4f64-88e8-4553aa9e1cf6",
+      "IdentifiedObject.name": "algo1",
+      "Ravens.cimObjectType": "DesignAlgorithmProperties",
+      "AlgorithmProperties.workingDirectory": "./",
+      "AlgorithmProperties.analysisPeriod": "P25Y",
+      "AlgorithmProperties.ProposedEnergyProducerOptions": [
+        "ProposedEnergyProducerOption::'proposedPV1'",
+        "ProposedEnergyProducerOption::'proposedESS1'"
+      ]
+    }
+  }
+}

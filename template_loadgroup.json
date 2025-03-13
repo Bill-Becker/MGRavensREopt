@@ -1,0 +1,12 @@
+{
+    "LoadGroup": {
+        "NameGroup": {
+            "Ravens.cimObjectType": "LoadGroup",
+            "IdentifiedObject.name": "NameGroup",
+            "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb",
+            "LoadGroup.EnergyConsumers": [
+                "EnergyConsumer::'670a_residential2'"
+            ]
+        }
+    }
+}

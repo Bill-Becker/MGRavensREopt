@@ -5,7 +5,7 @@
             "IdentifiedObject.name": "lmps_name",
             "Ravens.cimObjectType": "Ravens.LocationalMarginalPrices",
             "EnergyPrices.Regions": [
-                "name_Region"
+                "hce_Region"
             ],
             "LocationalMarginalPrices.LMPCurve": {
                 "IdentifiedObject.mRID": "4919302c-135b-429e-afe2-ad3cbd0479a3",

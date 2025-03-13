@@ -1,0 +1,44 @@
+{
+    "GeographicalRegion": {
+        "hce_Region": {
+            "Ravens.cimObjectType": "GeographicalRegion",
+            "IdentifiedObject.mRID": "_8383E42C-11FF-412E-9AEE-8A22334BBDB6",
+            "IdentifiedObject.name": "hce_Region",
+            "GeographicalRegion.Regions": [
+                {
+                    "Ravens.cimObjectType": "SubGeographicalRegion",
+                    "IdentifiedObject.mRID": "_7baa2ac0-af2e-4316-8fe3-4c9e000395b2",
+                    "IdentifiedObject.name": "hce_SubRegion",
+                    "SubGeographicalRegion.Region": "#_a513faee-2e68-4416-9d53-756f6d79e9f4",
+                    "Regions.EconomicProperty": {
+                        "IdentifiedObject.mRID": "290f8ed6-2588-4647-bef6-0a83f93d768e",
+                        "IdentifiedObject.name": "CountyEconomicProperties",
+                        "Ravens.cimObjectType": "EconomicProperty",
+                        "EconomicProperty.discountRate": 7.0,
+                        "EconomicProperty.inflationRate": 2.0,
+                        "EconomicProperty.taxRate": 26.0,
+                        "EconomicProperty.Regions": [
+                            "hce_Region"
+                        ]
+                    },
+                    "Regions.EnergyPrices": {
+                        "Ravens.cimObjectType": "EnergyPrices",
+                        "IdentifiedObject.mRID": "_f9921f2f-65dc-4e36-b3a8-11eb6cdf72c7",
+                        "IdentifiedObject.name": "energyprices_hce",
+                        "EnergyPrices.LocationalMarginalPrices": "LocationalMarginalPrices::'lmps_hce'",
+                        "EnergyPrices.CapacityPrices": "CapacityPrices::'capacityprices_hce'",
+                        "EnergyPrices.CoincidentPeakPrices": "CoincidentPeakPrices::'coincidentpeakprices_hce'"
+                    }
+                }
+            ]
+        }
+    },
+    "SubGeographicalRegion": {
+        "hce_SubRegion": {
+            "Ravens.cimObjectType": "SubGeographicalRegion",
+            "IdentifiedObject.mRID": "_2BB7016C-8D41-4620-AD7E-A2CF1E0990DC",
+            "IdentifiedObject.name": "hce_SubRegion",
+            "SubGeographicalRegion.Region": "GeographicalRegion::'hce_Region'"
+        }
+    }
+}
