@@ -30,7 +30,8 @@ DotEnv.load!()
 # Only need the line below if calling this .jl file from within Julia, as opposed to command line executing which takes the CLI ARGS
 ARGS_local = deepcopy(Base.ARGS)
 if isempty(ARGS_local)
-    ARGS_local = ["REopt_Lehigh_v4_12.09.json", "REopt_Lehigh_v4_created.json"]
+    # ARGS_local = ["nda-hce-reopt-inputs.json", "nda-hce-reopt-outputs.json"]
+    ARGS_local = ["lehigh_v8_shorten_lmp.json", "lehigh_v8_outputs.json"]
 end
 
 # Load in the MG-Ravens .json schema file, which is the only user input and customized for the scenario to run
@@ -40,7 +41,7 @@ mgravens = JSON.parsefile(input_file_path)
 # Convert MG-Ravens data schema into REopt schema
 reopt_inputs = convert_mgravens_inputs_to_reopt_inputs(mgravens)
 
-open("converted_to_reopt_inputs.json","w") do f
+open("converted_to_reopt_inputs_from_"*ARGS_local[1],"w") do f
     JSON.print(f, reopt_inputs)
 end
 
