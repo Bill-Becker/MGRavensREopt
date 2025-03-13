@@ -902,9 +902,11 @@ uuid = "3fa0cd96-eef1-5676-8a61-b3b8758bbffb"
 
 [[deps.REopt]]
 deps = ["ArchGDAL", "CSV", "CoolProp", "DataFrames", "Dates", "DelimitedFiles", "HTTP", "JLD", "JSON", "JuMP", "LinDistFlow", "LinearAlgebra", "Logging", "MathOptInterface", "Requires", "Roots", "Statistics", "TestEnv", "UUIDs"]
-path = "C:\\Users\\wbecker\\.julia\\dev\\REopt"
+git-tree-sha1 = "37861ca30cca69d2c35af4a2de7a4ec5c8e7b40d"
+repo-rev = "mg-ravens"
+repo-url = "https://github.com/NREL/REopt.jl.git"
 uuid = "d36ad4e8-d74a-4f7a-ace1-eaea049febf6"
-version = "0.48.2"
+version = "0.51.1"
 
 [[deps.Random]]
 deps = ["SHA"]
