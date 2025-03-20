@@ -31,7 +31,7 @@ DotEnv.load!()
 ARGS_local = deepcopy(Base.ARGS)
 if isempty(ARGS_local)
     # ARGS_local = ["nda-hce-reopt-inputs.json", "nda-hce-reopt-outputs.json"]
-    ARGS_local = ["lehigh_v8_shorten_lmp.json", "lehigh_v8_outputs.json"]
+    ARGS_local = ["lehigh_v8_shorten_lmp_one_load.json", "lehigh_v8_outputs_one_load.json"]
 end
 
 # TODO is PV production/generation profile in AC/DC, or DC/DC?
