@@ -163,7 +163,7 @@
             "ProposedEnergyProducerAsset.capacity": {
                 "unit": "W",
                 "multiplier": "k",
-                "value": 16.1568
+                "value": 15.8702
             },
             "ProposedAsset.EstimatedCosts": "EstimatedCost::'Optimal'",
             "Ravens.cimObjectType": "ProposedEnergyProducerAsset",
@@ -35214,10 +35214,10 @@
                 "Ravens.cimObjectType": "DispatchCurve",
                 "Curve.xUnit": "h",
                 "IdentifiedObject.name": "PVProfile",
-                "IdentifiedObject.mRID": "e783d713-25bf-40a5-9a78-aaf27f1df1e7"
+                "IdentifiedObject.mRID": "90497067-acfa-485d-a6a5-308b17490ff5"
             },
             "IdentifiedObject.name": "REopt_PV",
-            "IdentifiedObject.mRID": "e65239ea-1e3a-4dbf-832f-1dd8f45d2b4e"
+            "IdentifiedObject.mRID": "2a04cb4f-4546-4470-94c2-3cf83e3e8e27"
         },
         "proposedESS1 :: Configuration 4": {
             "ProposedEnergyProducerAsset.capacity": 0.0,
@@ -35358,7 +35358,7 @@
             "ProposedEnergyProducerAsset.capacity": {
                 "unit": "W",
                 "multiplier": "k",
-                "value": 50000.0
+                "value": 50.0
             },
             "ProposedAsset.EstimatedCosts": "EstimatedCost::'Optimal'",
             "Ravens.cimObjectType": "ProposedBatteryUnit",
@@ -35366,10 +35366,10 @@
             "ProposedBatteryUnit.energyCapacity": {
                 "unit": "Wh",
                 "multiplier": "k",
-                "value": 90.08
+                "value": 59.33
             },
             "IdentifiedObject.name": "REopt_ESS",
-            "IdentifiedObject.mRID": "53d60590-4be1-49a1-b672-1f5d8437d051"
+            "IdentifiedObject.mRID": "82b49e19-21a3-4c68-b004-59d34fda857d"
         },
         "proposedESS1 :: Configuration 3": {
             "ProposedEnergyProducerAsset.capacity": 100000.0,
@@ -35409,7 +35409,7 @@
                 "ProposedAssetSet.ProposedAssets": [],
                 "ProposedAssetSet.Application": "Application::'REopt'",
                 "IdentifiedObject.name": "BusinessAsUsual",
-                "IdentifiedObject.mRID": "3411c084-3d43-44f6-bc4e-ce50a5b16d3b",
+                "IdentifiedObject.mRID": "497d1c7a-20d6-4ef9-a21d-926d7a73ab12",
                 "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'BusinessAsUsual'"
             },
             "Configuration 1": {
@@ -35456,7 +35456,7 @@
                 ],
                 "ProposedAssetSet.Application": "Application::'REopt'",
                 "IdentifiedObject.name": "Optimal",
-                "IdentifiedObject.mRID": "434ea739-0d40-43ef-808d-6360a2c3b56d",
+                "IdentifiedObject.mRID": "6bedce0b-feaa-4649-b330-d3b471e7173b",
                 "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'Optimal'"
             },
             "Configuration 4": {
@@ -36415,18 +36415,18 @@
             "EstimatedCost.lifecycleCost": 45960.7252,
             "EstimatedCost.netPresentValue": 0.0,
             "IdentifiedObject.name": "BusinessAsUsual",
-            "IdentifiedObject.mRID": "8c14e242-6250-4b41-a3f3-b4ba2522b445",
+            "IdentifiedObject.mRID": "2ab0143f-561c-4408-81e6-90f6b25dcdd2",
             "EstimatedCost.lifecycleCapitalCost": 0.0
         },
         "Optimal": {
-            "EstimatedCost.lifecycleEnergyCost": 11066.02,
+            "EstimatedCost.lifecycleEnergyCost": 11759.35,
             "Ravens.cimObjectType": "EstimatedCost",
-            "EstimatedCost.lifecycleCapacityCost": 4875.19,
-            "EstimatedCost.lifecycleCost": 3.63870592637e7,
-            "EstimatedCost.netPresentValue": -3.634109854e7,
+            "EstimatedCost.lifecycleCapacityCost": 5573.01,
+            "EstimatedCost.lifecycleCost": 99131.4739,
+            "EstimatedCost.netPresentValue": -53170.75,
             "IdentifiedObject.name": "Optimal",
-            "IdentifiedObject.mRID": "a76aa7a2-4431-40c6-bb44-fb7ccd5d4df8",
-            "EstimatedCost.lifecycleCapitalCost": 3.6366634786e7
+            "IdentifiedObject.mRID": "42705e64-e0c8-4e2b-84a7-e0e6926d89f8",
+            "EstimatedCost.lifecycleCapitalCost": 77395.358
         }
     },
     "AssetInfo": {
@@ -76188,7 +76188,7 @@
                 "Application.applicationName": "REopt"
             },
             "Message.message": "Any[(\"core_electric_utility.jl_335\", Any[\"When using stochastic outage modeling (i.e. outage_start_time_steps, outage_durations, outage_probabilities), \\n                    emissions and renewable energy percentage calculations and constraints do not consider outages.\"])]",
-            "IdentifiedObject.mRID": "d94e8723-76f2-4794-9b8b-26233664dab6"
+            "IdentifiedObject.mRID": "83611ba1-54f5-47e1-8c02-58e5704704c6"
         },
         {
             "Ravens.cimObjectType": "Error",
@@ -76196,7 +76196,7 @@
                 "Application.applicationName": "REopt"
             },
             "Message.message": "",
-            "IdentifiedObject.mRID": "a378eaae-951c-4440-af0e-8bbf764d0b63"
+            "IdentifiedObject.mRID": "abfb0ca2-c9aa-4a6a-9225-b4d69c10e7b9"
         }
     ],
     "Location": {

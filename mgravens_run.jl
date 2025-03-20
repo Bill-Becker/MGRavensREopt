@@ -34,6 +34,8 @@ if isempty(ARGS_local)
     ARGS_local = ["lehigh_v8_shorten_lmp.json", "lehigh_v8_outputs.json"]
 end
 
+# TODO is PV production/generation profile in AC/DC, or DC/DC?
+
 # Load in the MG-Ravens .json schema file, which is the only user input and customized for the scenario to run
 input_file_path = ARGS_local[1]
 mgravens = JSON.parsefile(input_file_path)

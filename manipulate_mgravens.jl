@@ -33,6 +33,7 @@ region_name = "hce_Region"
 lmp_name = "lmps_hce"
 capacity_prices_name = "capacityprices_hce"
 cp_prices_name = "coincidentpeakprices_hce"
+pv_prod_file = "pv_normalized_production_hce.csv"
 
 # Replace string segments placeholder in the key names or values of the mgravens["EnergyPrices"] dictionary with a variable to be input
 function replace_name_segments!(dict, placeholder, name)
@@ -61,7 +62,25 @@ if isnothing(get(mgravens, "ProposedAssetOption", nothing))
 end
 
 # Remove PV GenerationProfile from template to use PVWatts within REopt
-delete!(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"], "ProposedPhotovoltaicUnitOption.GenerationProfile")
+#delete!(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"], "ProposedPhotovoltaicUnitOption.GenerationProfile")
+# TODO this ASSUMES 8760 profile, and currently is taking data of DC_actual / DC_rated, even though the input should be AC_actual / DC_rated
+#   however, we are also underestimating the total PV because it's only based on 5 MW DC and there might be more like 6-6.7 MW AC power on the system
+if !isnothing(get(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"], "proposedPV1", nothing))
+    if !isnothing(get(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"], "ProposedPhotovoltaicUnitOption.GenerationProfile", nothing))
+        pv_gen_profile = get(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"]["ProposedPhotovoltaicUnitOption.GenerationProfile"], "Curve.CurveDatas", [])
+        if length(pv_gen_profile) < 24
+            pv_gen_profile = CSV.read(pv_prod_file, DataFrame)[!, :normalized_production]
+            mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"]["ProposedPhotovoltaicUnitOption.GenerationProfile"]["Curve.CurveDatas"] = []
+            for ts in 1:8760
+                updated_pv_gen = Dict(
+                    "CurveData.xvalue"=> ts-1, 
+                    "CurveData.y1value"=> pv_gen_profile[ts]
+                )
+                append!(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"]["ProposedPhotovoltaicUnitOption.GenerationProfile"]["Curve.CurveDatas"], [updated_pv_gen])
+            end
+        end
+    end
+end
 
 # Manipulate other PV or Battery inputs here
 
@@ -162,6 +181,8 @@ if created_energy_prices
         global hour_count += round(Int, 30.5 * 24)
     end
 end
+
+
 
 open("nda-hce-reopt-inputs.json","w") do f
     JSON.print(f, mgravens)
