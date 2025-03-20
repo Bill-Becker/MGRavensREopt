@@ -70437,11 +70437,9 @@
         "LoadGroup": {
             "ResidentialGroup": {
                 "Ravens.cimObjectType": "LoadGroup",
-                "LoadGroup.EnergyConsumers": [
-                    "EnergyConsumer::'670a_residential2'"
-                ],
                 "IdentifiedObject.name": "ResidentialGroup",
-                "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb"
+                "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb",
+                "LoadGroup.EnergyConsumers": []                
             }
         },
         "ProposedAssetSet": {
@@ -71321,9 +71319,7 @@
             ],
             "IdentifiedObject.name": "proposedSite1",
             "IdentifiedObject.mRID": "A9C5BFEE-FFFB-4CDC-94EC-813291D042A4",
-            "ProposedSiteLocation.LoadGroup": [
-                "LoadGroup::'ResidentialGroup'"
-            ]
+            "ProposedSiteLocation.LoadGroup": []
         }
     },
     "ConnectivityNode": {
@@ -71705,13 +71701,13 @@
                 "ProposedAssetOption.lifetime": "P25Y",
                 "ProposedBatteryUnitOption.chargeEfficiency": 92.0,
                 "IdentifiedObject.name": "proposedESS1",
-                "ProposedEnergyProducerOption.powerCapacityMin": 50000.0,
+                "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
                 "ProposedAssetOption.ProposedConnectivityNodes": [
                     "ConnectivityNode::'670'"
                 ],
                 "ProposedBatteryUnitOption.stateOfChargeMin": 20.0,
                 "ProposedBatteryUnitOption.decayRate": 0.5,
-                "ProposedEnergyProducerOption.powerCapacityMax": 150000.0,
+                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e9,
                 "ProposedBatteryUnitOption.InverterController": {
                     "VoltVarControlMode.VoltVarControlCurve": {
                         "Curve.CurveDatas": [
@@ -106810,7 +106806,7 @@
                         }
                     ]
                 },
-                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e6
+                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e9
             }
         }
     },

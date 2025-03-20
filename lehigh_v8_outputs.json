@@ -163,7 +163,7 @@
             "ProposedEnergyProducerAsset.capacity": {
                 "unit": "W",
                 "multiplier": "k",
-                "value": 15.8702
+                "value": 4244.4983
             },
             "ProposedAsset.EstimatedCosts": "EstimatedCost::'Optimal'",
             "Ravens.cimObjectType": "ProposedEnergyProducerAsset",
@@ -35214,10 +35214,10 @@
                 "Ravens.cimObjectType": "DispatchCurve",
                 "Curve.xUnit": "h",
                 "IdentifiedObject.name": "PVProfile",
-                "IdentifiedObject.mRID": "90497067-acfa-485d-a6a5-308b17490ff5"
+                "IdentifiedObject.mRID": "9de07708-5d0c-4a0b-9ee7-309cc46a9079"
             },
             "IdentifiedObject.name": "REopt_PV",
-            "IdentifiedObject.mRID": "2a04cb4f-4546-4470-94c2-3cf83e3e8e27"
+            "IdentifiedObject.mRID": "bf45d33a-360b-47b8-854c-64cd1dc3eec9"
         },
         "proposedESS1 :: Configuration 4": {
             "ProposedEnergyProducerAsset.capacity": 0.0,
@@ -35358,7 +35358,7 @@
             "ProposedEnergyProducerAsset.capacity": {
                 "unit": "W",
                 "multiplier": "k",
-                "value": 50.0
+                "value": 1405.16
             },
             "ProposedAsset.EstimatedCosts": "EstimatedCost::'Optimal'",
             "Ravens.cimObjectType": "ProposedBatteryUnit",
@@ -35366,10 +35366,10 @@
             "ProposedBatteryUnit.energyCapacity": {
                 "unit": "Wh",
                 "multiplier": "k",
-                "value": 59.33
+                "value": 15371.49
             },
             "IdentifiedObject.name": "REopt_ESS",
-            "IdentifiedObject.mRID": "82b49e19-21a3-4c68-b004-59d34fda857d"
+            "IdentifiedObject.mRID": "d96be00d-5216-494f-92fe-31da7ea42286"
         },
         "proposedESS1 :: Configuration 3": {
             "ProposedEnergyProducerAsset.capacity": 100000.0,
@@ -35387,9 +35387,7 @@
         "LoadGroup": {
             "ResidentialGroup": {
                 "Ravens.cimObjectType": "LoadGroup",
-                "LoadGroup.EnergyConsumers": [
-                    "EnergyConsumer::'670a_residential2'"
-                ],
+                "LoadGroup.EnergyConsumers": [],
                 "IdentifiedObject.name": "ResidentialGroup",
                 "IdentifiedObject.mRID": "146813dc-3f62-4430-93be-860f5f584fcb"
             }
@@ -35409,7 +35407,7 @@
                 "ProposedAssetSet.ProposedAssets": [],
                 "ProposedAssetSet.Application": "Application::'REopt'",
                 "IdentifiedObject.name": "BusinessAsUsual",
-                "IdentifiedObject.mRID": "497d1c7a-20d6-4ef9-a21d-926d7a73ab12",
+                "IdentifiedObject.mRID": "6cb6f17c-8795-453a-a679-cf79fec41cc8",
                 "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'BusinessAsUsual'"
             },
             "Configuration 1": {
@@ -35456,7 +35454,7 @@
                 ],
                 "ProposedAssetSet.Application": "Application::'REopt'",
                 "IdentifiedObject.name": "Optimal",
-                "IdentifiedObject.mRID": "6bedce0b-feaa-4649-b330-d3b471e7173b",
+                "IdentifiedObject.mRID": "aa72ca52-4782-4608-ba36-950ffc0f3630",
                 "ProposedAssetSet.EstimatedCosts": "EstimatedCost::'Optimal'"
             },
             "Configuration 4": {
@@ -36290,9 +36288,7 @@
             ],
             "IdentifiedObject.name": "proposedSite1",
             "IdentifiedObject.mRID": "A9C5BFEE-FFFB-4CDC-94EC-813291D042A4",
-            "ProposedSiteLocation.LoadGroup": [
-                "LoadGroup::'ResidentialGroup'"
-            ]
+            "ProposedSiteLocation.LoadGroup": []
         }
     },
     "ConnectivityNode": {
@@ -36409,24 +36405,24 @@
     },
     "EstimatedCost": {
         "BusinessAsUsual": {
-            "EstimatedCost.lifecycleEnergyCost": 30649.93,
+            "EstimatedCost.lifecycleEnergyCost": 8.44530036e6,
             "Ravens.cimObjectType": "EstimatedCost",
-            "EstimatedCost.lifecycleCapacityCost": 14144.51,
-            "EstimatedCost.lifecycleCost": 45960.7252,
+            "EstimatedCost.lifecycleCapacityCost": 2.71986408e6,
+            "EstimatedCost.lifecycleCost": 1.14865229022e7,
             "EstimatedCost.netPresentValue": 0.0,
             "IdentifiedObject.name": "BusinessAsUsual",
-            "IdentifiedObject.mRID": "2ab0143f-561c-4408-81e6-90f6b25dcdd2",
+            "IdentifiedObject.mRID": "021da6cb-0cff-4946-8fd6-47414b463b22",
             "EstimatedCost.lifecycleCapitalCost": 0.0
         },
         "Optimal": {
-            "EstimatedCost.lifecycleEnergyCost": 11759.35,
+            "EstimatedCost.lifecycleEnergyCost": 3.4336386e6,
             "Ravens.cimObjectType": "EstimatedCost",
-            "EstimatedCost.lifecycleCapacityCost": 5573.01,
-            "EstimatedCost.lifecycleCost": 99131.4739,
-            "EstimatedCost.netPresentValue": -53170.75,
+            "EstimatedCost.lifecycleCapacityCost": 1.4671736e6,
+            "EstimatedCost.lifecycleCost": 1.78763459244e7,
+            "EstimatedCost.netPresentValue": -6.38982302e6,
             "IdentifiedObject.name": "Optimal",
-            "IdentifiedObject.mRID": "42705e64-e0c8-4e2b-84a7-e0e6926d89f8",
-            "EstimatedCost.lifecycleCapitalCost": 77395.358
+            "IdentifiedObject.mRID": "2f06f29b-4e73-427a-afc3-fc80b09febfb",
+            "EstimatedCost.lifecycleCapitalCost": 1.17977461779e7
         }
     },
     "AssetInfo": {
@@ -36696,13 +36692,13 @@
                 "ProposedAssetOption.lifetime": "P25Y",
                 "ProposedBatteryUnitOption.chargeEfficiency": 92.0,
                 "IdentifiedObject.name": "proposedESS1",
-                "ProposedEnergyProducerOption.powerCapacityMin": 50000.0,
+                "ProposedEnergyProducerOption.powerCapacityMin": 0.0,
                 "ProposedAssetOption.ProposedConnectivityNodes": [
                     "ConnectivityNode::'670'"
                 ],
                 "ProposedBatteryUnitOption.stateOfChargeMin": 20.0,
                 "ProposedBatteryUnitOption.decayRate": 0.5,
-                "ProposedEnergyProducerOption.powerCapacityMax": 150000.0,
+                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e9,
                 "ProposedBatteryUnitOption.InverterController": {
                     "VoltVarControlMode.VoltVarControlCurve": {
                         "Curve.CurveDatas": [
@@ -71801,7 +71797,7 @@
                         }
                     ]
                 },
-                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e6
+                "ProposedEnergyProducerOption.powerCapacityMax": 1.0e9
             }
         }
     },
@@ -76188,7 +76184,7 @@
                 "Application.applicationName": "REopt"
             },
             "Message.message": "Any[(\"core_electric_utility.jl_335\", Any[\"When using stochastic outage modeling (i.e. outage_start_time_steps, outage_durations, outage_probabilities), \\n                    emissions and renewable energy percentage calculations and constraints do not consider outages.\"])]",
-            "IdentifiedObject.mRID": "83611ba1-54f5-47e1-8c02-58e5704704c6"
+            "IdentifiedObject.mRID": "5e0785c1-2b04-40a2-932a-4dd97b6c1f4a"
         },
         {
             "Ravens.cimObjectType": "Error",
@@ -76196,7 +76192,7 @@
                 "Application.applicationName": "REopt"
             },
             "Message.message": "",
-            "IdentifiedObject.mRID": "abfb0ca2-c9aa-4a6a-9225-b4d69c10e7b9"
+            "IdentifiedObject.mRID": "b5403559-f3a0-4441-9f94-880962de7ec4"
         }
     ],
     "Location": {
