@@ -1,19 +1,19 @@
 {
-    "ProposedSiteLocations": {
+    "ProposedSiteLocation": {
         "proposedSite1": {
             "IdentifiedObject.mRID": "A9C5BFEE-FFFB-4CDC-94EC-813291D042A4",
             "IdentifiedObject.name": "proposedSite1",
             "Ravens.cimObjectType": "Ravens.ProposedSiteLocation",
             "ProposedSiteLocation.availableArea": 1000.0,
-            "ProposedSiteLocation.LoadGroup": [
+            "ProposedSiteLocation.LoadGroups": [
                 "LoadGroup::'ResidentialGroup'"
             ],
             "ProposedSiteLocation.Region": "SubGeographicalRegion::'name_SubRegion'",
             "Location.PositionPoints": [
                 {
                     "PositionPoint.sequenceNumber": 1,
-                    "PositionPoint.xPosition": -106.6898,
-                    "PositionPoint.yPosition": 39.7027,
+                    "PositionPoint.xPosition": "-106.6898",
+                    "PositionPoint.yPosition": "39.7027",
                     "Ravens.cimObjectType": "PositionPoint",
                     "IdentifiedObject.mRID": "704184d0-6fc1-4f99-8d14-9e51cef1a206"
                 }

@@ -1,0 +1,13 @@
+{
+  "HCEEconomicProperties": {
+    "EconomicProperty.inflationRate": 2.5,
+    "EconomicProperty.discountRate": 8.0,
+    "Ravens.cimObjectType": "EconomicProperty",
+    "EconomicProperty.Regions": [
+      "hce_Region"
+    ],
+    "EconomicProperty.taxRate": 24.0,
+    "IdentifiedObject.name": "HCEEconomicProperties",
+    "IdentifiedObject.mRID": "290f8ed6-2588-4647-bef6-0a83f93d768e"
+  }
+}

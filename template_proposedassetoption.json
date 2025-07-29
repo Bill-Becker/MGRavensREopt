@@ -49,22 +49,22 @@
                     "ConnectivityNode::'670'"
                 ],
                 "ProposedEnergyProducerOption.powerCapacityMin": {
-                    "value": 1500.0,
+                    "value": 0.0,
                     "unit": "W",
                     "multiplier": "k"
                 },
                 "ProposedEnergyProducerOption.powerCapacityMax": {
-                    "value": 1500.0,
+                    "value": 10000.0,
                     "unit": "W",
                     "multiplier": "k"
                 },
                 "ProposedBatteryUnitOption.energyCapacityMin": {
-                    "value": 3000.0,
+                    "value": 0.0,
                     "unit": "Wh",
                     "multiplier": "k"
                 },
                 "ProposedBatteryUnitOption.energyCapacityMax": {
-                    "value": 6000.0,
+                    "value": 20000.0,
                     "unit": "Wh",
                     "multiplier": "k"
                 },
