@@ -10,12 +10,13 @@ This should check for the existing of all needed keys and values in the mgravens
 """
 
 # Load the existing mgravens JSON file to add/manipulate
-mgravens = JSON.parsefile("nda-hce-feeder-03062025.json")
+mgravens = JSON.parsefile("cyme-hce-reduced_pecs-wprofiles-all.json")
 
 # Template files for adding keys/sections to the mgravens JSON file
 algoprops_template = JSON.parsefile("template_algoprops.json")
 proposedassetoption_template = JSON.parsefile("template_proposedassetoption.json")
-proposedsitelocation_template = JSON.parsefile("template_proposedsitelocations.json")
+proposedsitelocation_template = JSON.parsefile("template_proposedsitelocation.json")
+economic_property_template = JSON.parsefile("template_economicprops.json")
 region_template = JSON.parsefile("template_region.json")
 loadgroup_template = JSON.parsefile("template_loadgroup.json")
 lmp_template = JSON.parsefile("template_lmp.json")
@@ -25,6 +26,7 @@ outages_template = JSON.parsefile("template_outages.json")
 
 # Proper noun/names to be assigned to this particular use case
 site_name = "proposedSite1"
+economic_property_name = "HCEEconomicProperties"
 load_groups = []  # e.g. ["ResidentialGroup", "IndustrialGroup"]; if empty, don't rely on LoadGroup to find EnergyConsumers and instead aggregate all EnergyConsumers
 energy_consumer_names = collect(keys(mgravens["PowerSystemResource"]["Equipment"]["ConductingEquipment"]["EnergyConnection"]["EnergyConsumer"]))
 # load_forecast_names = ["hce_residential_shape"]
@@ -61,6 +63,10 @@ if isnothing(get(mgravens, "ProposedAssetOption", nothing))
     mgravens["ProposedAssetOption"] = proposedassetoption_template["ProposedAssetOption"]
 end
 
+if isnothing(get(mgravens, "EconomicProperty", nothing))
+    mgravens["EconomicProperty"] = Dict(economic_property_name => economic_property_template[economic_property_name])
+end
+
 # Remove PV GenerationProfile from template to use PVWatts within REopt
 #delete!(mgravens["ProposedAssetOption"]["ProposedEnergyProducerOption"]["proposedPV1"], "ProposedPhotovoltaicUnitOption.GenerationProfile")
 # TODO this ASSUMES 8760 profile, and currently is taking data of DC_actual / DC_rated, even though the input should be AC_actual / DC_rated
@@ -84,12 +90,12 @@ end
 
 # Manipulate other PV or Battery inputs here
 
-if isnothing(get(mgravens, "ProposedSiteLocations", nothing))
-    mgravens["ProposedSiteLocations"] = Dict(site_name => replace_name_segments!(proposedsitelocation_template["ProposedSiteLocations"][site_name], "name_SubRegion", subregion_name))
+if isnothing(get(mgravens, "ProposedSiteLocation", nothing))
+    mgravens["ProposedSiteLocation"] = Dict(site_name => replace_name_segments!(proposedsitelocation_template["ProposedSiteLocation"][site_name], "name_SubRegion", subregion_name))
 end
 
 # Make ProposedSiteLocation.LoadGroup empty for this use case because this assumes all EnergyConsumers get aggregated
-mgravens["ProposedSiteLocations"][site_name]["ProposedSiteLocation.LoadGroup"] = load_groups
+mgravens["ProposedSiteLocation"][site_name]["ProposedSiteLocation.LoadGroups"] = load_groups
 
 # Outages - would REopt choose four outages centered around peak load?
 if isnothing(get(mgravens, "OutageScenario", nothing))
@@ -184,7 +190,7 @@ end
 
 
 
-open("nda-hce-reopt-inputs.json","w") do f
+open("cyme-hce-reduced_pecs-wprofiles-all_inputs.json","w") do f
     JSON.print(f, mgravens)
 end
 
